@@ -3,7 +3,7 @@ import Button from "../Button";
 import Modal from "../Model"
 import TextField from "../TextField"
 import { v4 as uuidv4 } from 'uuid';
-import { ItemAction, useItem } from "../../itemProvider";
+import { useItem } from "../../itemProvider";
 
 export enum ItemStatus {
     Active,
