@@ -1,0 +1,11 @@
+#root {
+  flex: 1;
+  max-width: 100vh;
+  margin: 0 auto;
+  margin-top: 10rem;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}

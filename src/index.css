@@ -1,0 +1,36 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  padding: 20px;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+/* สำหรับ Desktop (ขนาดหน้าจอ 768px ขึ้นไป) */
+@media (min-width: 768px) {
+  .main-container {
+      flex-direction: row; /* เปลี่ยนเป็นแนวนอน */
+  }
+
+  .card {
+      flex: 1; /* ให้ card ขยายเต็มพื้นที่ */
+  }
+}

@@ -1,0 +1,72 @@
+/* Card Component Styling */
+.card {
+    background-color: #ECECEC; /* Cool Grey/Beige */
+    border: 2px solid #333333; /* Dark Grey */
+    border-radius: 12px; /* Rounded corners for a playful look */
+    box-shadow: 4px 4px 0 #333333; /* Sharp shadow for retro effect */
+    padding: 20px;
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    min-height: 300px;
+  }
+  
+  .card.bg-primary {
+    background-color: #A2D8FF;
+  }
+  
+  .card.bg-secondary {
+    background-color: #ECECEC;
+  }
+  
+  .card.bg-success {
+    background-color: #98D19F;
+  }
+  
+  .card.bg-warning {
+    background-color: #FFD966;
+  }
+  
+  .card.bg-error {
+    background-color: #D9534F;
+  }
+  
+  .card.flat {
+    box-shadow: none;
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0 #333333;
+  }
+  
+  .card.flat:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .card.disable-hover:hover {
+    box-shadow: 4px 4px 0 #333333;
+    transform: none;
+  }
+  
+  /* Card Header */
+  .card-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333; /* Dark Grey */
+    margin-bottom: 15px;
+  }
+  
+  /* Card Content */
+  .card-content {
+    font-size: 16px;
+    color: #4B4B4B; /* Dark Grey/Black */
+    line-height: 1.5;
+  }
+  
+  /* Card Footer */
+  .card-footer {
+    margin-top: 20px;
+    text-align: right;
+  }
