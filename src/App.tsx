@@ -1,7 +1,7 @@
 import './App.css'
 import NewItem from './components/NewItem'
 import { ItemProvider } from './itemProvider'
-import Board from './components/Board'
+import ItemList from './components/ItemList'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <h1>Stock Guardian</h1>
       <ItemProvider>
         <NewItem></NewItem>
-        <Board></Board>
+        <ItemList></ItemList>
       </ItemProvider>
     </>
   )

@@ -3,7 +3,7 @@ import Card from "../Card";
 import Item from "../Item";
 import { ItemProps, ItemStatus } from "../NewItem";
 
-function Board() {
+function ItemList() {
     const items = useItem();
     const dispatch = useItemDispatch();
 
@@ -24,15 +24,15 @@ function Board() {
 
     return (
         <div className='main-container'>
-            <Card header='ของใช้ในบ้าน'>
+            <Card header='Active Stock'>
                 {ActiveList}
             </Card>
 
-            <Card header='หมด/หมดอายุ'>
+            <Card header='Out of Stock'>
                 {DeactiveList}
             </Card>
         </div>
     )
 }
 
-export default Board
+export default ItemList
