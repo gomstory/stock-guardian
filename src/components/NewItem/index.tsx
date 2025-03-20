@@ -21,7 +21,7 @@ export interface ItemProps {
 const NewItem = () => {
   const [itemName, setItemName] = useState('');
   const [isModalOpen, setModalOpen] = useState(false);
-  const [checked, setChecked] = useState<boolean>(false);
+  const [checked, setChecked] = useState<boolean>(true);
 
   const handleSwitchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
@@ -51,6 +51,10 @@ const NewItem = () => {
     closeModal();
   }
 
+  const saveData = () => {
+    // save data to local storage
+  }
+
   const modalFooter = (
     <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
       <Button variant='secondary' onClick={closeModal}>
@@ -65,6 +69,7 @@ const NewItem = () => {
 
   return <>
     <Button onClick={openModal}>New Item</Button>
+    <Button variant="success" onClick={saveData}>Save</Button>
     <Modal isOpen={isModalOpen} onClose={closeModal} title="New Item" footer={modalFooter}>
       <div>
         <TextField
