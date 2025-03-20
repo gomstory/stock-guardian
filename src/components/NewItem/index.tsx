@@ -3,7 +3,7 @@ import Button from "../Button";
 import Modal from "../Model"
 import TextField from "../TextField"
 import { v4 as uuidv4 } from 'uuid';
-import { useItem } from "../../itemProvider";
+import { useItem, useItemDispatch } from "../../itemProvider";
 
 export enum ItemStatus {
     Active,
@@ -20,7 +20,7 @@ export interface ItemProps {
 const NewItem = () => {
     const [itemName, setItemName] = useState('');
     const [isModalOpen, setModalOpen] = useState(false);
-    const { dispatch } = useItem()
+    const dispatch  = useItemDispatch()
     const openModal = () => setModalOpen(true);
     const closeModal = () => {
       setItemName('');

@@ -1,10 +1,11 @@
-import { useItem } from "../../itemProvider";
+import { useItem, useItemDispatch } from "../../itemProvider";
 import Card from "../Card";
 import Item from "../Item";
 import { ItemProps, ItemStatus } from "../NewItem";
 
 function Board() {
-    const { state, dispatch } = useItem();
+    const items = useItem();
+    const dispatch = useItemDispatch();
 
     const moveItem = (item: ItemProps) => {
         return dispatch({
@@ -13,11 +14,11 @@ function Board() {
         })
     }
 
-    const ActiveList = state
+    const ActiveList = items
         .filter(it => it.status == ItemStatus.Active)
         .map(it => <Item onClick={() => moveItem(it)} itemStatus={ItemStatus.Active} key={it.id}>{it.item}</Item>)
 
-    const DeactiveList = state
+    const DeactiveList = items
         .filter(it => it.status == ItemStatus.Deactive)
         .map(it => <Item onClick={() => moveItem(it)} itemStatus={ItemStatus.Deactive} key={it.id}>{it.item}</Item>)
 
